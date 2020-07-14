@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px -6px black;
+}
+
+.block{
+    width: 60%;
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 500px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.icon{
+    width: 70px;
+    height: 100%;
+    background-color: chartreuse;
+}
+
+.title{
+    font-size: 22px;
+    margin-left: 5%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.linksGroup{
+    display: flex;
+    margin-left: 15%;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@media only screen and (max-width: 500px) {
+    .block {
+        width: 92%;
+    }
+}

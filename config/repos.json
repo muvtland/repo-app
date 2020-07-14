@@ -1,0 +1,20 @@
+[
+  {
+    "name": "facebook/react",
+    "description": "React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes. Declarative views make your code more predictable, simpler to understand, and easier to debug.",
+    "language": "JavaScript",
+    "url": "https://github.com/facebook/react"
+  },
+  {
+    "name": "nodejs/node",
+    "description": "Node.js is an open-source, cross-platform, JavaScript runtime environment. It executes JavaScript code outside of a browser. For more information on using Node.js, see the Node.js Website.\n\nThe Node.js project uses an open governance model. The OpenJS Foundation provides support for the project.",
+    "language": "JavaScript",
+    "url": "https://github.com/nodejs/node"
+  },
+  {
+    "name": "laravel/laravel",
+    "description": "Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling.",
+    "language": "PHP",
+    "url": "https://github.com/laravel/laravel"
+  }
+]
