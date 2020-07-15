@@ -19,12 +19,29 @@
     border-radius: 12px;
 }
 
-@media only screen and (max-width: 500px) {
-    .container {
-        width: 92%;
-    }
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70vh;
+}
+
+.fotFound{
+    font-size: 16px;
 }
 
 .search:hover{
     background-color: #003492;
 }
+
+@media only screen and (max-width: 500px) {
+    .container {
+        width: 92%;
+        margin-top: 20px;
+    }
+    .search{
+        margin-bottom: 0;
+    }
+}
+

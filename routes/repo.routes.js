@@ -11,10 +11,10 @@ router.get('/', async (req, res) => {
      res.json(defaultRepos)
 })
 
-router.get('/search/:str/:language/:owner', async (req, res) => {
-    const searchStr = req.params.str || 'node'
-    const language = req.params.language || 'JavaScript'
-    const owner = req.params.owner || 'facebook'
+router.get('/search/:str?/:language?/:owner?', async (req, res) => {
+    const searchStr = req.params.str || ''
+    const language = req.params.language || ''
+    const owner = req.params.owner || ''
 
     const repos = []
 
@@ -32,6 +32,7 @@ router.get('/search/:str/:language/:owner', async (req, res) => {
                 url: html_url
             })
         }
+
         res.json(repos)
     }catch (e) {
         res.status(400).json(e.message)

@@ -15,11 +15,11 @@ export default () => {
 
     useEffect(() => {
         dispatch(reposFetch())
-    }, [])
+    }, [dispatch])
 
-    if (loading){
+    if (loading) {
         return (
-            <div className={'loader'}>
+            <div className={styles.loader}>
                 <Loader
                     type="TailSpin"
                     color="#00BFFF"
@@ -38,7 +38,12 @@ export default () => {
             </div>
             <div>
                 <h2>Repositories</h2>
-                {repos.length ? repos.map((repo, i) => <Cart repo={repo} key={i}/>): <div>Repos Not Found</div>}
+                {
+                    repos.length ?
+                        repos.map((repo, i) => <Cart repo={repo} key={i}/>)
+                        :
+                        <div className={styles.fotFound}>Repos Not Found</div>
+                }
             </div>
         </div>
     )

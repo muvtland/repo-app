@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './components/navbar/navbar'
 import Repos from './pages/repo/repo'
 
-function App() {
+export default () => {
   return (
     <div >
         <Navbar/>
@@ -13,4 +13,3 @@ function App() {
   )
 }
 
-export default App

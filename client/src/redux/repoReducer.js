@@ -4,8 +4,8 @@ const handlers = {
     [SEARCH]: ({repos}, action) => {
         return {repos: action.payload, loading: false}
     },
-    [LOADINGSTART]: state => ({...state, ['loading']: true}),
-    [LOADINGEND]: state => ({...state, ['loading']: false}),
+    [LOADINGSTART]: state => ({...state, loading: true}),
+    [LOADINGEND]: state => ({...state, loading: false}),
     DEFAULT: state => state
 }
 

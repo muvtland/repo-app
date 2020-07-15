@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import {useDispatch, useSelector} from 'react-redux'
+import {useDispatch} from 'react-redux'
 import {searchFetch} from '../../redux/actions'
 import styles from './search.module.css'
 
@@ -25,7 +25,21 @@ export default props => {
 
     const search = () => {
         props.onClick(false)
-        dispatch(searchFetch(`/api/repo/search/'${searchStr}/${language}/${owner}`))
+        let url = '/api/repo/search/'
+
+        if (searchStr){
+            url += searchStr + '/'
+        }
+        if (language){
+            url += language + '/'
+        }
+        if (owner){
+            url += owner
+        }
+
+        if (searchStr || language || owner){
+            dispatch(searchFetch(url))
+        }
     }
 
 

@@ -34,8 +34,8 @@ export default props => {
                     <span>language:</span>
                     {language}
                 </div>
-                <div >
-                    <a href={url} target='_blank'>Go To  Repo</a>
+                <div className={styles.link}>
+                    <a href={url} target='_blank' rel="noopener noreferrer">Go To  Repo</a>
                 </div>
             </div>
         </div>

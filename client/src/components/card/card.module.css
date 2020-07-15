@@ -10,6 +10,7 @@
     box-shadow: 5px 10px 15px #888888;
 }
 
+
 .content{
     margin-bottom: 30px;
 }
@@ -20,6 +21,7 @@
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 
 .name div{
@@ -67,4 +69,21 @@ a:hover{
 
 .container:hover{
     background-color: rgba(0, 52, 146, 0.1);
+}
+
+@media only screen and (max-width: 500px) {
+    .name {
+        font-size: 22px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .description{
+        flex-direction: column;
+    }
+    .language{
+        flex-direction: column;
+    }
+    .link{
+        display: flex;
+    }
 }

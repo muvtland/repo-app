@@ -1,23 +1,13 @@
 import {SEARCH, LOADINGSTART, LOADINGEND} from './types'
 
-
-
-
 const loadingStart = () => ({type: LOADINGSTART})
 const loadingEnd = () => ({type: LOADINGEND})
-
-// const getRepos = () => {
-//     return dispatch => {
-//         dispatch({type: REPOS, payload: []})
-//     }
-// }
 
 const addRepos = repos => {
     return dispatch => {
         dispatch({type: SEARCH, payload: repos})
     }
 }
-
 
 export const searchFetch = (url) => {
     return async dispatch => {
@@ -30,6 +20,7 @@ export const searchFetch = (url) => {
             dispatch(loadingEnd())
         }catch (e) {
             dispatch(loadingEnd())
+            dispatch(addRepos([]))
         }
     }
 }
@@ -44,6 +35,7 @@ export const reposFetch = () => {
             dispatch(loadingEnd())
         }catch (e) {
             dispatch(loadingEnd())
+            dispatch(addRepos([]))
         }
     }
 }
